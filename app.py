@@ -1,13 +1,13 @@
-import os	
+'''import os	
 import gc
 import json
 import base64
 from io import BytesIO
 from tts import TextToSpeech
-from scipy.io.wavfile import write
+from scipy.io.wavfile import write'''
 from flask import Flask, request, render_template, redirect, jsonify, send_from_directory
 
-tts = TextToSpeech()
+#tts = TextToSpeech()
 app = Flask(__name__)
 
 '''@app.route('/', methods=['GET'])
@@ -16,7 +16,7 @@ def send_index():
 
 @app.route('/<path:path>', methods=['GET'])
 def send_root(path):
-	return send_from_directory('./www', path)'''
+	return send_from_directory('./www', path)
 
 @app.route('/play/text', methods=['POST'])
 def play_play():
@@ -33,7 +33,17 @@ def play_play():
 
 	del byte_file
 	gc.collect()
-	return jsonify(answer)
+	return jsonify(answer)'''
+
+@app.route('/play/text', methods=['GET'])
+def play_play():
+	print('asdsadsadsaf')
+	return 0
+
+@app.route('/', methods=['GET'])
+def c():
+	print('cccc')
+	return 0
 
 if __name__ == '__main__':
 	app.run(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))
