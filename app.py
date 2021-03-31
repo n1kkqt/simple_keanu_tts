@@ -1,4 +1,4 @@
-import os
+import os	
 import gc
 import json
 import base64
@@ -18,7 +18,7 @@ def send_index():
 def send_root(path):
 	return send_from_directory('./www', path)
 
-@app.route('/play', methods=['POST'])
+@app.route('/play/text', methods=['POST'])
 def play_play():
 
 	content = request.form.get('text')#request.get_json(silent=True)

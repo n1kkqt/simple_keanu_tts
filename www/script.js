@@ -11,7 +11,7 @@ function _handleSubmit() {
       var xhr = new XMLHttpRequest();
       var z = this;
       
-      xhr.open('post', '/play', true);
+      xhr.open('post', '/play/text', true);
       
       xhr.onload = async function () {
         if (this.status == 200) {
