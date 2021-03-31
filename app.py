@@ -12,13 +12,10 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def send_index():
-	gc.collect()
 	return send_from_directory('./www', "index.html")
 
 @app.route('/<path:path>', methods=['GET'])
 def send_root(path):
-
-	gc.collect()
 	return send_from_directory('./www', path)
 
 @app.route('/play', methods=['POST'])
