@@ -39,13 +39,13 @@ def play_play():
 def play_play():
 	answer = {"response": 'playtext'}
     
-    return jsonify(answer)
+	return jsonify(answer)
 
 @app.route('/', methods=['POST'])
 def c():
 	answer = {"response": 'c'}
     
-    return jsonify(answer)
+	return jsonify(answer)
 
 if __name__ == '__main__':
 	app.run(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))
