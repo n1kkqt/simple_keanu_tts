@@ -3,11 +3,11 @@ import gc
 import json
 import base64
 from io import BytesIO
-from tts import TextToSpeech
-from scipy.io.wavfile import write
+#from tts import TextToSpeech
+#from scipy.io.wavfile import write
 from flask import Flask, request, render_template, redirect, jsonify, send_from_directory
 
-tts = TextToSpeech()
+#tts = TextToSpeech()
 app = Flask(__name__)
 
 '''@app.route('/', methods=['GET'])
