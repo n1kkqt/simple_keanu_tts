@@ -10,7 +10,7 @@ from flask import Flask, request, render_template, redirect, jsonify, send_from_
 tts = TextToSpeech()
 app = Flask(__name__)
 
-@app.route('/', methods=['GET'])
+@app.route('/butt', methods=['GET'])
 def send_index():
 	return send_from_directory('./www', "index.html")
 
