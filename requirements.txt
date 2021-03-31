@@ -1,2 +1,10 @@
 Flask
 gunicorn
+numpy
+scipy
+re
+os
+gc
+json
+base64
+io
