@@ -18,7 +18,7 @@ def send_index():
 def send_root(path):
 	return send_from_directory('./www', path)
 
-@app.route('/play/text', methods=['POST'])
+@app.route('/play', methods=['POST'])
 def play_play():
 
 	content = request.form.get('text')#request.get_json(silent=True)
