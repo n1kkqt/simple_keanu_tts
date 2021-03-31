@@ -69,8 +69,6 @@ pathtools==0.1.2
 pexpect==4.8.0
 pickleshare==0.7.5
 Pillow==7.0.0
-pluggy==0.13.1
-PythonAPI
 pycodestyle==2.5.0
 pycparser==2.20
 pydocstyle==5.0.2
