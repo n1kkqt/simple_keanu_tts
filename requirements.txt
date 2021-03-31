@@ -73,7 +73,6 @@ pluggy==0.13.1
 progressbar2==3.50.0
 prometheus-client==0.7.1
 prompt-toolkit==3.0.5
-protobuf==3.11.3
 PythonAPI
 pycodestyle==2.5.0
 pycparser==2.20
@@ -97,10 +96,7 @@ pywin32-ctypes==0.2.0
 pywinpty==0.5.7
 PyYAML==5.3
 pyzmq==19.0.0
-QDarkStyle==2.8.1
-QtAwesome==0.7.0
 qtconsole==4.7.2
-QtPy==1.9.0
 requests==2.23.0
 rope==0.16.0
 Rtree==0.9.3
