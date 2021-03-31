@@ -1,4 +1,5 @@
 import re
+import pickle
 import numpy as np
 from scipy.io import wavfile
 
@@ -17,14 +18,8 @@ class TextToSpeech:
                           '8':['EY', 'T'],'9':['N', 'AY', 'N'], "'":[' ']}
 
     def _load_words(self, words_pron_dict:str):
-        with open(words_pron_dict, 'r') as file:
-            for line in file:
-                if not line.startswith(';;;'):
-                    key, val = line.split('  ',2)
-                    if not key[0].isalpha():
-                        key = key[0]
-                    self._l[key] = re.findall(r"[A-Z]+",val)
-                    
+        with open('words_dict.pickle', 'rb') as f:
+            self._l = pickle.load(f)                  
                     
     def _word_to_sounds(self, word):
         if word[0] == "'":
