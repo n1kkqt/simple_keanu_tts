@@ -57,7 +57,7 @@ class TextToSpeech:
         print(list_pron)
         for sound in list_pron:
             if (sound != ' ') and (sound != '.'):
-                samplerate, data = wavfile.read("norm_sounds/"+sound+".wav")
+                samplerate, data = wavfile.read("norm_sounds/"+sound.lower()+".wav")
             else:
                 if sound == ' ':
                     data = np.zeros((4800,2)).astype(np.int16)
