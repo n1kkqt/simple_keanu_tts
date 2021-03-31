@@ -10,11 +10,11 @@ from flask import Flask, request, render_template, redirect, jsonify, send_from_
 tts = TextToSpeech()
 app = Flask(__name__)
 
-@app.route('/butt', methods=['GET'])
+@app.route('/', methods=['GET'])
 def send_index():
 	return send_from_directory('./www', "index.html")
 
-@app.route('/<path:path>', methods=['GET'])
+'''@app.route('/<path:path>', methods=['GET'])
 def send_root(path):
 	return send_from_directory('./www', path)
 
@@ -38,4 +38,4 @@ def play_play():
 if __name__ == '__main__':
 	app.run(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))
 	#app.run(debug=True, host='127.0.0.1', #0.0.0.0
-	#	port=int(os.environ.get('PORT', 8080)))
+	#	port=int(os.environ.get('PORT', 8080)))'''
